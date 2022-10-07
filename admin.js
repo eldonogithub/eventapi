@@ -8,7 +8,7 @@ var defaultUser = {
 var user = {}
 
 function account_sort(a, b) {
-
+	"use string";
 	if (a["name"] > b["name"]) {
 		return 1;
 	}
@@ -21,6 +21,7 @@ function account_sort(a, b) {
 }
 
 function user_sort(a, b) {
+	"use string";
 
 	if (a["firstName"] > b["firstName"]) {
 		return 1;
@@ -40,6 +41,7 @@ function user_sort(a, b) {
 }
 
 function custom_sort(a, b) {
+	"use string";
 
 	if (a["date"] > b["date"]) {
 		return 1;
@@ -53,6 +55,7 @@ function custom_sort(a, b) {
 }
 
 function renderUsersTable(arr) {
+	"use string";
 	let div = document.createElement("div")
 	div.setAttribute("id", "users")
 	let h2= document.createElement("h2")
@@ -146,6 +149,7 @@ function renderUsersTable(arr) {
 }
 
 function renderAccountsTable(arr) {
+	"use string";
 	let div = document.createElement("div")
 	div.setAttribute("id", "accounts")
 	let h2= document.createElement("h2")
@@ -208,6 +212,7 @@ function renderAccountsTable(arr) {
 }
 
 function getAccounts(event) {
+	"use string";
 	var request = new XMLHttpRequest();
 
 	request.open('GET', 'https://api.aptrinsic.com/v1/accounts?filter=&pageSize=&scrollId=&sort=');
@@ -239,6 +244,7 @@ function getAccounts(event) {
 }
 
 function getUsers(event) {
+	"use string";
 	var request = new XMLHttpRequest();
 
 	request.open('GET', 'https://api.aptrinsic.com/v1/users?filter=&pageSize=&scrollId=&sort=');
@@ -270,6 +276,7 @@ function getUsers(event) {
 }
 
 function addDeleteUser(id, row) {
+	"use string";
 
 	return function deleteUser(event) {
 		var request = new XMLHttpRequest();
@@ -293,8 +300,30 @@ function addDeleteUser(id, row) {
 	}
 
 }
+function addDeleteCustomEvent(id, row) {
+	return function deleteUser(event) {
+		var request = new XMLHttpRequest();
 
+		request.open('DELETE', 'https://api.aptrinsic.com/v1/events/custom/' + id + '?hardDelete=true');
+		request.setRequestHeader('X-APTRINSIC-API-KEY', "dcafaea2-0c5d-472b-80b1-261bfa1c7bf8")
+
+		request.onreadystatechange = function () {
+			if (this.readyState === 4) {
+				console.log('Status:', this.status);
+				console.log('Headers:', this.getAllResponseHeaders());
+				console.log('Body:', this.responseText);
+
+				if (this.status == 200) {
+					row.parentNode.removeChild(row)
+				}
+			}
+		};
+
+		request.send();
+	}
+}
 function renderCustomTable(arr) {
+	"use string";
 	let div = document.createElement("div")
 	div.setAttribute("id", "customEvents")
 	let h2= document.createElement("h2")
@@ -332,6 +361,9 @@ function renderCustomTable(arr) {
 			thr.appendChild(th)
 		}
 	}
+	let th = document.createElement("th")
+	th.appendChild(document.createTextNode("Action"))
+	thr.appendChild(th)
 
 	let tbody = document.createElement("tbody")
 	table.appendChild(tbody)
@@ -356,6 +388,14 @@ function renderCustomTable(arr) {
 				tr.appendChild(td)
 			}
 		}
+		button = document.createElement("button")
+		button.addEventListener("click", addDeleteCustomEvent(arr[i].eventId, tr))
+		button.textContent = "Delete"
+
+		td = document.createElement("td")
+		td.classList.add("userAction")
+		td.appendChild(button)
+		tr.appendChild(td)
 
 		tbody.appendChild(tr)
 	}
@@ -363,37 +403,56 @@ function renderCustomTable(arr) {
 }
 
 function getCustomEvents() {
-	var request = new XMLHttpRequest();
+	"use string";
+	const log = document.querySelector('.event-log');
+
+	function handleEvent(e) {
+		log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
+	}
+	
+	request = new XMLHttpRequest();
 
 	request.open('GET', 'https://api.aptrinsic.com/v1/events/custom?dateRangeEnd=&dateRangeStart=&filter=&pageSize=&scrollId=&sort=');
 	request.setRequestHeader('X-APTRINSIC-API-KEY', "dcafaea2-0c5d-472b-80b1-261bfa1c7bf8")
+	
+    request.addEventListener('loadstart', handleEvent);
+    request.addEventListener('load', handleEvent);
+    request.addEventListener('progress', handleEvent);
+    request.addEventListener('error', handleEvent);
+    request.addEventListener('abort', handleEvent);
 
-	request.onreadystatechange = function () {
-		if (this.readyState === 4) {
+	request.addEventListener('loadend', function (e) {
+		log.textContent = `${log.textContent}${e.type}: ${e.loaded} bytes transferred\n`;
+
+		if (this.readyState === this.DONE) {
 			console.log('Status:', this.status);
 			console.log('Headers:', this.getAllResponseHeaders());
 			console.log('Body:', this.responseText);
 
-			results = JSON.parse(this.responseText)
+			if ( this.status == 200 ) {
+				results = JSON.parse(this.responseText)
 
-			if (Object.hasOwn(results, "customEvents")) {
-				table = renderCustomTable(results['customEvents'])
-				users = document.getElementById("customEvents")
-				if (users != null) {
-					console.log("replacing content")
-					content.replaceChild(table, users)
-				}
-				else {
-					console.log("appending content")
-					content.appendChild(table)
+				if (Object.hasOwn(results, "customEvents")) {
+					table = renderCustomTable(results['customEvents'])
+					users = document.getElementById("customEvents")
+					if (users != null) {
+						console.log("replacing content")
+						content.replaceChild(table, users)
+					}
+					else {
+						console.log("appending content")
+						content.appendChild(table)
+					}
 				}
 			}
 		}
-	};
+	});
 
 	request.send();
 }
+
 function loaded() {
+	"use string";
 	user = defaultUser
 
 	span = document.getElementById("user")

@@ -40,6 +40,7 @@ var allusers = {
 }
 
 function updateUser(event) {
+	"use string";
     id = event.target.value;
 
     console.log(id)
@@ -51,6 +52,7 @@ function updateUser(event) {
 }
 
 function populateForm() {
+	"use string";
     docFrag = document.createDocumentFragment()
     select = document.getElementById("user-select")
 
@@ -74,6 +76,7 @@ function populateForm() {
 }
 
 function loaded() {
+	"use string";
     // attempt to get the current logged in user
     for (key in defaultUser) {
         login[key] = localStorage.getItem(key)
