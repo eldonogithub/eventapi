@@ -1,0 +1,82 @@
+{
+    "accounts": [
+        {
+            "id": "IBM",
+            "name": "International Business Machine",
+            "trackedSubscriptionId": "",
+            "sfdcId": "",
+            "lastSeenDate": 1664991393163,
+            "dunsNumber": "",
+            "industry": "",
+            "numberOfEmployees": 0,
+            "sicCode": "",
+            "website": "http://localhost/~eldon/",
+            "naicsCode": "",
+            "plan": "",
+            "location": {
+                "countryName": "",
+                "countryCode": "",
+                "stateName": "",
+                "stateCode": "",
+                "city": "",
+                "street": "",
+                "postalCode": "",
+                "continent": "",
+                "regionName": "",
+                "timeZone": "",
+                "coordinates": {
+                    "latitude": 0.0,
+                    "longitude": 0.0
+                }
+            },
+            "numberOfUsers": 0,
+            "propertyKeys": [
+                "AP-Z8OIU7VZQAUB-2-2"
+            ],
+            "createDate": 1664977916828,
+            "lastModifiedDate": 1664991393163,
+            "customAttributes": null,
+            "parentGroupId": ""
+        },
+        {
+            "id": "House Stark",
+            "name": "House Stark - Winterfell",
+            "trackedSubscriptionId": "",
+            "sfdcId": "",
+            "lastSeenDate": 1665064840338,
+            "dunsNumber": "",
+            "industry": "",
+            "numberOfEmployees": 0,
+            "sicCode": "",
+            "website": "http://localhost/~eldon/",
+            "naicsCode": "",
+            "plan": "",
+            "location": {
+                "countryName": "",
+                "countryCode": "",
+                "stateName": "",
+                "stateCode": "",
+                "city": "",
+                "street": "",
+                "postalCode": "",
+                "continent": "",
+                "regionName": "",
+                "timeZone": "",
+                "coordinates": {
+                    "latitude": 0.0,
+                    "longitude": 0.0
+                }
+            },
+            "numberOfUsers": 6,
+            "propertyKeys": [
+                "AP-Z8OIU7VZQAUB-2-2"
+            ],
+            "createDate": 1664991393190,
+            "lastModifiedDate": 1665064840338,
+            "customAttributes": null,
+            "parentGroupId": ""
+        }
+    ],
+    "totalHits": 2,
+    "scrollId": "DnF1ZXJ5VGhlbkZldGNoAwAAAAADLWjrFjhYUi1nNEdRVHRhSXd0amFkWjN6TlEAAAAAEG_PcxZrUFNyVGJ5a1E3MlF3MmdqTURtNzZnAAAAAAC8YKUWTzRvemhIUmpRSXlLaWRZQUtDTXVydw=="
+}

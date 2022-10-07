@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Login Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Gainsight PX Tag-->
+    <script type="text/javascript">
+        (function (n, t, a, e, co) {
+            var i = "aptrinsic"; n[i] = n[i] || function () {
+                (n[i].q = n[i].q || []).push(arguments)
+            }, n[i].p = e; n[i].c = co;
+            var r = t.createElement("script"); r.async = !0, r.src = a + "?a=" + e;
+            var c = t.getElementsByTagName("script")[0]; c.parentNode.insertBefore(r, c)
+        })(window, document, "https://web-sdk.aptrinsic.com/api/aptrinsic.js", "AP-Z8OIU7VZQAUB-2-2");
+    </script>
+    <!-- Gainsight PX Tag-->
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <script src='common.js'></script>
+    <script src='index.js'></script>
+</head>
+
+<body onload="loaded()">
+    <h1>Login Page</h1>
+    <h2>Logged in as: <span id="user"></span></h2>
+    <a href="page1.html">Visit Another Page</a>
+    <a href="admin.html">Admin</a>
+    <form id="login_form">
+        <label for="user-select">Select Login User:</label>
+
+        <select name="pets" id="user-select">
+            <option value="">--Please choose a user--</option>
+        </select>
+		<br>
+		<input id="send-custom-events" type="button" value="Send Custom Events">
+    </form>
+</body>
+
+</html>

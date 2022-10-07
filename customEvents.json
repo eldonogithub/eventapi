@@ -1,0 +1,128 @@
+{
+    "customEvents": [
+        {
+            "eventName": "Video",
+            "attributes": {
+                "Category": "Onboarding",
+                "Length": 5000.0,
+                "name": "Welcome Video",
+                "Launched date": 1520532660000,
+                "Launched": true
+            },
+            "url": "http://localhost/~eldon/",
+            "referrer": "",
+            "remoteHost": "156.34.22.111",
+            "eventId": "a10c0778-b3b8-4f50-8d29-620c17854d7d",
+            "identifyId": "6666",
+            "propertyKey": "AP-Z8OIU7VZQAUB-2-2",
+            "date": 1665086931970,
+            "eventType": "CUSTOM",
+            "sessionId": "AP-Z8OIU7VZQAUB-2-2-1665086925137-53838245",
+            "userType": "USER",
+            "accountId": "House Stark",
+            "globalContext": {}
+        },
+        {
+            "eventName": "Search",
+            "attributes": {
+                "Category": "Admin",
+                "terms": "profile setting how-to",
+                "results": 10.0
+            },
+            "url": "http://localhost/~eldon/",
+            "referrer": "",
+            "remoteHost": "156.34.22.111",
+            "eventId": "3382e51c-df06-46e6-97f4-baeeb424e37f",
+            "identifyId": "6666",
+            "propertyKey": "AP-Z8OIU7VZQAUB-2-2",
+            "date": 1665086932066,
+            "eventType": "CUSTOM",
+            "sessionId": "AP-Z8OIU7VZQAUB-2-2-1665086925137-53838245",
+            "userType": "USER",
+            "accountId": "House Stark",
+            "globalContext": {}
+        },
+        {
+            "eventName": "rep",
+            "attributes": {
+                "company_name": "%COMPANY%",
+                "timestamptz": 1665086931529
+            },
+            "url": "http://localhost/~eldon/",
+            "referrer": "",
+            "remoteHost": "156.34.22.111",
+            "eventId": "38bd61d2-a750-4bb3-b92d-6f069df0f8b0",
+            "identifyId": "6666",
+            "propertyKey": "AP-Z8OIU7VZQAUB-2-2",
+            "date": 1665086932068,
+            "eventType": "CUSTOM",
+            "sessionId": "AP-Z8OIU7VZQAUB-2-2-1665086925137-53838245",
+            "userType": "USER",
+            "accountId": "House Stark",
+            "globalContext": {}
+        },
+        {
+            "eventName": "Search",
+            "attributes": {
+                "Category": "Admin",
+                "terms": "profile setting how-to",
+                "results": 10.0
+            },
+            "url": "http://localhost/~eldon/",
+            "referrer": "",
+            "remoteHost": "156.34.22.111",
+            "eventId": "a0162370-1a62-434c-ad8d-47a39253bfb2",
+            "identifyId": "6666",
+            "propertyKey": "AP-Z8OIU7VZQAUB-2-2",
+            "date": 1665086866331,
+            "eventType": "CUSTOM",
+            "sessionId": "AP-Z8OIU7VZQAUB-2-2-1665086862891-88119658",
+            "userType": "USER",
+            "accountId": "House Stark",
+            "globalContext": {}
+        },
+        {
+            "eventName": "rep",
+            "attributes": {
+                "company_name": "%COMPANY%",
+                "timestamptz": 1665086865790
+            },
+            "url": "http://localhost/~eldon/",
+            "referrer": "",
+            "remoteHost": "156.34.22.111",
+            "eventId": "6db7f64f-b26e-4382-8e2c-fc2a731e8d4b",
+            "identifyId": "6666",
+            "propertyKey": "AP-Z8OIU7VZQAUB-2-2",
+            "date": 1665086866360,
+            "eventType": "CUSTOM",
+            "sessionId": "AP-Z8OIU7VZQAUB-2-2-1665086862891-88119658",
+            "userType": "USER",
+            "accountId": "House Stark",
+            "globalContext": {}
+        },
+        {
+            "eventName": "Video",
+            "attributes": {
+                "Category": "Onboarding",
+                "Length": 5000.0,
+                "name": "Welcome Video",
+                "Launched date": 1520532660000,
+                "Launched": true
+            },
+            "url": "http://localhost/~eldon/",
+            "referrer": "",
+            "remoteHost": "156.34.22.111",
+            "eventId": "dbbbecc8-f2da-4cf6-a22c-2d9bccdf4f69",
+            "identifyId": "6666",
+            "propertyKey": "AP-Z8OIU7VZQAUB-2-2",
+            "date": 1665086867274,
+            "eventType": "CUSTOM",
+            "sessionId": "AP-Z8OIU7VZQAUB-2-2-1665086862891-88119658",
+            "userType": "USER",
+            "accountId": "House Stark",
+            "globalContext": {}
+        }
+    ],
+    "totalHits": 6,
+    "scrollId": "DnF1ZXJ5VGhlbkZldGNoFAAAAAA1hggpFm42bGVQN1FnUW0yeFZqc0RLMndOWXcAAAAAED0nYxZWcGZRVHFXZVE1ZVpoUVpiaml0bDZnAAAAAFa5njkWNV9jUTNNSjZUY2FZd1dsempwX1hTdwAAAAADqm5nFkloMVZCb25QVFdLb3o2SGNWLVlXZkEAAAAAA-9IMBZaNWVEM0JpeFRUYU96Y3ZveEVkU0xBAAAAACsM3kQWSHVPWkkxNjlTN0dybEdGQ3JpQTFyQQAAAAAGSyE_FkEwb3o3SGV1U2hPVGpNMlpOdklYWUEAAAAANYYIKhZuNmxlUDdRZ1FtMnhWanNESzJ3Tll3AAAAAAZLIUAWQTBvejdIZXVTaE9Uak0yWk52SVhZQQAAAAA4VCynFmh4ZDZWRm5vUWFXcERpV09nU0JKTlEAAAAAgTeiyxY1MjNSczZNc1NKdWF3aHN4ZFdEUkhnAAAAADhULKYWaHhkNlZGbm9RYVdwRGlXT2dTQkpOUQAAAAAF7PGNFm1qYk1qNjFXUmxhbVk4UnY0YlVyV2cAAAAAD-AHZBZKVGNKTHFnZVREMjkxMl9sdEhfaTV3AAAAAAXs8Y4WbWpiTWo2MVdSbGFtWThSdjRiVXJXZwAAAAAP4AdjFkpUY0pMcWdlVEQyOTEyX2x0SF9pNXcAAAAAARB03hYxMW1FalY0OFMyLW9hY01MMWRpRnh3AAAAAC7XJLsWd3l6M202S0RTcmFuTlV0WWpqS2xHZwAAAAADLmMFFjhYUi1nNEdRVHRhSXd0amFkWjN6TlEAAAAALtckvBZ3eXozbTZLRFNyYW5OVXRZampLbEdn"
+}
