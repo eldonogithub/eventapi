@@ -40,10 +40,8 @@ var allusers = {
 }
 
 function updateUser(event) {
-	"use string";
-    id = event.target.value;
-
-    console.log(id)
+	"use strict";
+    let id = event.target.value;
 
     if (id in allusers) {
         login = allusers[id]
@@ -52,12 +50,11 @@ function updateUser(event) {
 }
 
 function populateForm() {
-	"use string";
-    docFrag = document.createDocumentFragment()
-    select = document.getElementById("user-select")
+	"use strict";
+    let docFrag = document.createDocumentFragment()
+    let select = document.getElementById("user-select")
 
     for (let id in allusers) {
-        console.log(id, allusers[id])
         let user = allusers[id]
         let option = document.createElement("option")
         let text = document.createTextNode(user["firstName"] + " " + user["lastName"])
@@ -65,6 +62,9 @@ function populateForm() {
         if (Object.hasOwn(login, "id")) {
             if (login["id"] == id) {
                 option.selected = true
+            }
+            else {
+                option.selected=false
             }
         }
         option.appendChild(text)
@@ -76,10 +76,10 @@ function populateForm() {
 }
 
 function loaded() {
-	"use string";
+	"use strict";
     // attempt to get the current logged in user
-    for (key in defaultUser) {
-        login[key] = localStorage.getItem(key)
+    for (let key in defaultUser) {
+        login[key] = sessionStorage.getItem(key)
     }
 
     // Is a user already logged in?
@@ -87,10 +87,25 @@ function loaded() {
         login = defaultUser // login with the default user
     }
 
-    populateForm()
-
     loginUser(login)
 
-	sendEvents = document.getElementById("send-custom-events")
+    populateForm()
+
+	let sendEvents = document.getElementById("send-custom-events")
 	sendEvents.addEventListener('click', sendCustomEvents);
+
+    sendEvents = document.getElementById("send-custom-jump-item")
+	sendEvents.addEventListener('click', sendJumpItem);
+
+    sendEvents = document.getElementById("send-custom-session")
+	sendEvents.addEventListener('click', sendSessionEvent);
+
+    sendEvents = document.getElementById("send-custom-rep")
+	sendEvents.addEventListener('click', sendRepEvent);
+
+    sendEvents = document.getElementById("send-custom-vault-account")
+	sendEvents.addEventListener('click', sendVaultAccountEvent);
+
+    sendEvents = document.getElementById("send-custom-jumppoint")
+	sendEvents.addEventListener('click', sendJumpPointEvent);
 }
