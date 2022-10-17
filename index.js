@@ -91,10 +91,7 @@ function loaded() {
 
     populateForm()
 
-	let sendEvents = document.getElementById("send-custom-events")
-	sendEvents.addEventListener('click', sendCustomEvents);
-
-    sendEvents = document.getElementById("send-custom-jump-item")
+    let sendEvents = document.getElementById("send-custom-jump-item")
 	sendEvents.addEventListener('click', sendJumpItem);
 
     sendEvents = document.getElementById("send-custom-session")
